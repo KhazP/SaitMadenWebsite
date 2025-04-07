@@ -1,0 +1,619 @@
+/* ====================================
+   SAIT MADEN WEBSİTESİ - TEMEL STILLER
+   ====================================
+   
+   Sait Maden'in tasarım prensiplerinden ilham alan
+   minimalist, yüksek kontrastlı, tipografi odaklı tasarım
+*/
+
+/* -------- GENEL DEĞIŞKENLER -------- */
+:root {
+    /* Renk Paleti */
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-red: #C70039;
+    --color-gray: #8D8D8D;
+    --color-light-gray: #F5F5F5;
+    
+    /* Tipografi */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Lora', serif;
+    
+    /* Boşluklar */
+    --spacing-xs: 0.5rem;
+    --spacing-s: 1rem;
+    --spacing-m: 2rem;
+    --spacing-l: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Düzen */
+    --max-width: 1400px;
+    --content-width: 90%;
+}
+
+/* -------- TEMEL STIL SIFIRLAMA -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* -------- TİPOGRAFİ -------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-s);
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background-color: var(--color-red);
+    bottom: -10px;
+    left: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: var(--spacing-s);
+}
+
+blockquote {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+    border-left: 3px solid var(--color-red);
+    padding-left: var(--spacing-s);
+    margin: var(--spacing-m) 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-s);
+    border: 2px solid var(--color-black);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* -------- HEADER & NAVİGASYON -------- */
+header {
+    padding: var(--spacing-m) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: var(--max-width);
+    width: var(--content-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo h1 {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-s);
+}
+
+.nav-links a {
+    position: relative;
+    padding: var(--spacing-xs);
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red);
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-black);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* -------- ANA İÇERİK BÖLÜMÜ -------- */
+main {
+    max-width: var(--max-width);
+    width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--spacing-m) 0;
+}
+
+/* Hero bölümü */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-m);
+    margin-bottom: var(--spacing-xl);
+    align-items: center;
+}
+
+.hero-image {
+    height: 500px;
+    background-color: var(--color-light-gray);
+    overflow: hidden;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.hero-content {
+    padding: var(--spacing-m);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-m);
+}
+
+/* Bölümler genel bakış */
+.sections-overview {
+    margin-bottom: var(--spacing-xl);
+}
+
+.sections-overview h2 {
+    margin-bottom: var(--spacing-m);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-m);
+}
+
+.section-card {
+    padding: var(--spacing-m);
+    border: 1px solid var(--color-light-gray);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-card:hover {
+    border-color: var(--color-black);
+    transform: translateY(-5px);
+}
+
+.section-link {
+    margin-top: auto;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-red);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.section-link span {
+    transition: transform 0.3s ease;
+}
+
+.section-link:hover span {
+    transform: translateX(5px);
+}
+
+/* -------- FOOTER -------- */
+footer {
+    padding: var(--spacing-m) 0;
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    width: var(--content-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: var(--spacing-m);
+}
+
+.footer-info p {
+    margin-bottom: 0;
+}
+
+/* -------- RESPONSIVE TASARIM -------- */
+@media (max-width: 992px) {
+    :root {
+        --content-width: 95%;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        height: 300px;
+    }
+}
+
+/* -------- SAYFA BAŞLIKLARI -------- */
+.page-header {
+    margin-bottom: var(--spacing-l);
+    border-bottom: 1px solid var(--color-light-gray);
+    padding-bottom: var(--spacing-s);
+}
+
+/* -------- BİYOGRAFİ SAYFASI -------- */
+.bio-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-l);
+}
+
+.bio-text h3 {
+    margin-top: var(--spacing-m);
+}
+
+.timeline {
+    margin-top: var(--spacing-s);
+    border-left: 2px solid var(--color-red);
+    padding-left: var(--spacing-m);
+}
+
+.timeline li {
+    margin-bottom: var(--spacing-m);
+    position: relative;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-red);
+    border-radius: 50%;
+    left: calc(-1 * var(--spacing-m) - 7px);
+    top: 5px;
+}
+
+.timeline .date {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-red);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* -------- TASARIM SAYFASI -------- */
+.design-intro {
+    margin-bottom: var(--spacing-l);
+}
+
+.gallery-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.gallery-section h3 {
+    margin-bottom: var(--spacing-m);
+    display: inline-block;
+    position: relative;
+}
+
+.gallery-section h3::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-red);
+    bottom: -5px;
+    left: 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-m);
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-light-gray);
+}
+
+.gallery-item .placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-s);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-s);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-white);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* -------- ŞİİRLERİ SAYFASI -------- */
+.poetry-intro {
+    margin-bottom: var(--spacing-l);
+}
+
+.poetry-books {
+    margin-bottom: var(--spacing-l);
+}
+
+.poetry-books ul {
+    margin-left: var(--spacing-m);
+    list-style-type: disc;
+}
+
+.poetry-books li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.poem {
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.poem::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    font-size: 6rem;
+    color: var(--color-light-gray);
+    font-family: var(--font-heading);
+    z-index: -1;
+}
+
+.poem-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: var(--spacing-s);
+}
+
+.poem-content {
+    font-style: italic;
+    white-space: pre-line;
+    line-height: 1.8;
+}
+
+/* -------- ÇEVİRİLER SAYFASI -------- */
+.translations-intro {
+    margin-bottom: var(--spacing-l);
+}
+
+.translations-list {
+    margin-bottom: var(--spacing-l);
+}
+
+.translations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-m);
+}
+
+.translation-author {
+    padding: var(--spacing-s);
+    border-left: 3px solid var(--color-red);
+    margin-bottom: var(--spacing-m);
+}
+
+.translation-author h4 {
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.translation-works {
+    font-style: italic;
+}
+
+/* -------- KAYNAKÇA SAYFASI -------- */
+.bibliography-section {
+    margin-bottom: var(--spacing-l);
+}
+
+.bibliography-list ul {
+    margin-left: var(--spacing-m);
+    list-style-type: disc;
+}
+
+.bibliography-list li {
+    margin-bottom: var(--spacing-s);
+}
+
+.contact-section {
+    margin-bottom: var(--spacing-l);
+    padding: var(--spacing-m);
+    background-color: var(--color-light-gray);
+}
+
+/* -------- RESPONSIVE UYARLAMALAR -------- */
+@media (max-width: 992px) {
+    :root {
+        --content-width: 95%;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        height: 300px;
+    }
+    
+    .bio-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .bio-timeline {
+        margin-top: var(--spacing-m);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        z-index: 100;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 400px;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: var(--spacing-xl) var(--spacing-m);
+        transition: right 0.3s ease;
+        z-index: 99;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: var(--spacing-s) 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-s);
+    }
+    
+    .footer-nav ul {
+        gap: var(--spacing-s);
+    }
+}

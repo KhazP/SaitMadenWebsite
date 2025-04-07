@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Bulunamadı - Sait Maden Arşivi</title>
+    <meta name="description" content="Ulaşmaya çalıştığınız sayfa bulunamadı. Sait Maden Arşivi ana sayfasına dönebilirsiniz.">
+    <meta name="robots" content="noindex,follow">
+    
+    <!-- Google Fonts: Inter for headings, Lora for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Ana stil dosyası -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .error-code {
+            font-size: 6rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1;
+            color: #333;
+        }
+        
+        .error-message {
+            font-size: 2rem;
+            margin: 1rem 0 2rem;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+        
+        .home-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .home-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER: Site başlığı ve navigasyon -->
+    <header>
+        <div class="logo">
+            <h1>Sait Maden</h1>
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Menüyü Aç">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/index.html">Ana Sayfa</a></li>
+                <li><a href="/biyografi.html">Biyografi</a></li>
+                <li><a href="/tasarim.html">Grafik Tasarım ve Tipografi</a></li>
+                <li><a href="/siirler.html">Şiirleri</a></li>
+                <li><a href="/ceviriler.html">Çevirileri</a></li>
+                <li><a href="/kaynakca.html">Kaynakça</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN: Ana içerik bölümü -->
+    <main>
+        <div class="error-container">
+            <h1 class="error-code">404</h1>
+            <h2 class="error-message">Sayfa Bulunamadı</h2>
+            <p class="error-description">Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir. Lütfen URL'yi kontrol edin veya ana sayfaya dönün.</p>
+            <a href="/index.html" class="home-button">Ana Sayfaya Dön</a>
+        </div>
+    </main>
+
+    <!-- FOOTER: Site alt bilgisi -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Sait Maden Arşivi</p>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/index.html">Ana Sayfa</a></li>
+                    <li><a href="/kaynakca.html">Kaynakça</a></li>
+                    <li><a href="/kaynakca.html#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ana JavaScript dosyası -->
+    <script src="/script.js"></script>
+</body>
+</html>

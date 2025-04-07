@@ -1,0 +1,28 @@
+# Cloudflare Pages için yapılandırma dosyası
+name = "sait-maden-arsivi"
+compatibility_date = "2025-04-07"
+
+# Dağıtım yapılandırması
+[site]
+bucket = "./" # Site dosyalarının kök dizini
+
+# Web sunucu geliştirme yapılandırması
+[dev]
+port = 8787
+local_protocol = "http"
+
+# Çıktı ayarları
+[build]
+command = "" # Statik HTML sitesi olduğu için build komutu yok
+upload.format = "directory"
+output_directory = "./"
+
+# Özel alan adı ayarları
+# [env.production.route]
+# pattern = "www.saitmadenarsivi.org"
+# zone_name = "saitmadenarsivi.org"
+
+# Ortam değişkenleri
+[vars]
+ENVIRONMENT = "production"
+SITE_URL = "https://www.saitmadenarsivi.org"
