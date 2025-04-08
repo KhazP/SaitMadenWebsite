@@ -7,29 +7,27 @@ https://www.sait-maden.org/* https://www.saitmadenarsivi.org/:splat 301!
 https://sait-maden.org/* https://www.saitmadenarsivi.org/:splat 301!
 
 # Handle common URL variations
-/biography    /biyografi          301
-/works        /tasarim            301
-/poems        /siirler            301
-/translations /ceviriler          301
-/contact      /kaynakca#iletisim  301
-
-# Redirect old file paths if necessary
-# /eski-dosya-yolu /yeni-dosya-yolu 301
-
-# Optional: Redirect for clean URLs (without .html extension)
-# This only works if your hosting supports it
-/biyografi  /biyografi.html  200
-/tasarim    /tasarim.html    200
-/siirler    /siirler.html    200
-/ceviriler  /ceviriler.html  200
-/kaynakca   /kaynakca.html   200
+/biography    /biyografi.html    301
+/works        /tasarim.html      301
+/poems        /siirler.html      301
+/translations /ceviriler.html    301
+/contact      /kaynakca.html     301
 
 # Handle trailing slashes
-/biyografi/   /biyografi   301
-/tasarim/     /tasarim     301
-/siirler/     /siirler     301
-/ceviriler/   /ceviriler   301
-/kaynakca/    /kaynakca    301
+/biyografi/   /biyografi.html    301
+/tasarim/     /tasarim.html      301
+/siirler/     /siirler.html      301
+/ceviriler/   /ceviriler.html    301
+/kaynakca/    /kaynakca.html     301
+/basin/       /basin.html        301
+
+# Remove .html extension redirects as they were causing loops
+# These lines were causing the redirect loops:
+# /biyografi  /biyografi.html  200
+# /tasarim    /tasarim.html    200
+# /siirler    /siirler.html    200
+# /ceviriler  /ceviriler.html  200
+# /kaynakca   /kaynakca.html   200
 
 # Handle 404 errors
 /*            /404.html     404
