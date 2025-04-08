@@ -171,9 +171,13 @@ header {
 /* For mobile screens */
 @media (max-width: 768px) {
     .logo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
     }
     
     .logo img {
@@ -749,6 +753,10 @@ figcaption {
     
     .footer-nav ul {
         gap: var(--spacing-s);
+    }
+    
+    .hero-image {
+        height: 250px; /* Reduce height on smaller screens */
     }
 }
 
