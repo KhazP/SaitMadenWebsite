@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.saitmadenarsivi.org/sitemap.xml
+Sitemap: https://saitmadenwebsite.pages.dev/sitemap.xml

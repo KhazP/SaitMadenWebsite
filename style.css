@@ -29,6 +29,10 @@
     /* Düzen */
     --max-width: 1400px;
     --content-width: 90%;
+    
+    /* Görsel Boyutları */
+    --portrait-max-width: 400px;
+    --hero-max-height: 600px;
 }
 
 /* -------- TEMEL STIL SIFIRLAMA -------- */
@@ -145,9 +149,36 @@ header {
     position: relative;
 }
 
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
 .logo h1 {
-    margin-bottom: 0;
-    font-weight: 700;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
 }
 
 nav {
@@ -221,6 +252,13 @@ main {
     height: 500px;
     background-color: var(--color-light-gray);
     overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: var(--hero-max-height);
 }
 
 .placeholder-image {
@@ -426,6 +464,26 @@ footer {
     background-color: var(--color-light-gray);
 }
 
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: var(--color-light-gray);
+}
+
+.book-cover, .poster-design, .typography-work, .calligraphy-work {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: var(--color-light-gray);
+}
+
+/* Gallery image hover effect */
+.gallery-item:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .gallery-item .placeholder-image {
     width: 100%;
     height: 100%;
@@ -446,6 +504,12 @@ footer {
     color: var(--color-white);
     transform: translateY(100%);
     transition: transform 0.3s ease;
+}
+
+.gallery-caption p {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--color-light-gray);
 }
 
 .gallery-item:hover .gallery-caption {
@@ -546,6 +610,76 @@ footer {
     margin-bottom: var(--spacing-l);
     padding: var(--spacing-m);
     background-color: var(--color-light-gray);
+}
+
+/* İmaj ve Figcaption Stilleri */
+figure {
+    margin-bottom: var(--spacing-m);
+}
+
+figcaption {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    margin-top: var(--spacing-xs);
+    text-align: center;
+}
+
+.portrait-main {
+    max-width: var(--portrait-max-width);
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.portrait-secondary {
+    max-width: calc(var(--portrait-max-width) * 0.8);
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.translator-portrait, .poet-portrait {
+    max-width: var(--portrait-max-width);
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* -------- SAYFA GÖRSELLERI -------- */
+.translator-image, .poet-image {
+    max-width: var(--portrait-max-width);
+    margin: 0 auto var(--spacing-l) auto;
+}
+
+.translator-image img, .poet-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.bio-image-left, .bio-image-right {
+    max-width: calc(var(--portrait-max-width) * 0.8);
+    margin: var(--spacing-m) 0;
+}
+
+.bio-image-left {
+    float: left;
+    margin-right: var(--spacing-m);
+}
+
+.bio-image-right {
+    float: right;
+    margin-left: var(--spacing-m);
+}
+
+@media (max-width: 768px) {
+    .bio-image-left, .bio-image-right {
+        float: none;
+        margin: var(--spacing-m) auto;
+        max-width: 100%;
+    }
 }
 
 /* -------- RESPONSIVE UYARLAMALAR -------- */

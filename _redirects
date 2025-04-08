@@ -1,7 +1,17 @@
+# Enforce canonical domain for all URLs
+http://saitmadenwebsite.pages.dev/* https://saitmadenwebsite.pages.dev/:splat 301!
+
 # Redirect domain aliases to primary domain
 https://saitmadenarsivi.org/* https://www.saitmadenarsivi.org/:splat 301!
 https://www.sait-maden.org/* https://www.saitmadenarsivi.org/:splat 301!
 https://sait-maden.org/* https://www.saitmadenarsivi.org/:splat 301!
+
+# Handle common URL variations
+/biography    /biyografi          301
+/works        /tasarim            301
+/poems        /siirler            301
+/translations /ceviriler          301
+/contact      /kaynakca#iletisim  301
 
 # Redirect old file paths if necessary
 # /eski-dosya-yolu /yeni-dosya-yolu 301
@@ -14,5 +24,12 @@ https://sait-maden.org/* https://www.saitmadenarsivi.org/:splat 301!
 /ceviriler  /ceviriler.html  200
 /kaynakca   /kaynakca.html   200
 
+# Handle trailing slashes
+/biyografi/   /biyografi   301
+/tasarim/     /tasarim     301
+/siirler/     /siirler     301
+/ceviriler/   /ceviriler   301
+/kaynakca/    /kaynakca    301
+
 # Handle 404 errors
-/* /404.html 404
+/*            /404.html     404
