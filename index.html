@@ -22,9 +22,8 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://saitmadenwebsite.pages.dev/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="C:\Users\alpya\Documents\GitHub\SaitMadenWebsite\assets\images\Said_and_Maden_logo.ico">
+      <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/Said_and_Maden_logo.ico">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
     
     <!-- Structured Data (Schema.org) -->
@@ -91,8 +90,8 @@
         <div class="logo">
             <h1>Sait Maden</h1>
         </div>
-        <nav>
-            <button class="menu-toggle" aria-label="Menüyü Aç">
+        <nav>            <button class="menu-toggle" aria-label="Menüyü Aç" aria-expanded="false" aria-controls="nav-links">
+                <span class="sr-only">Menu</span>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -107,21 +106,21 @@
                 <li><a href="kaynakca.html">Kaynakça</a></li>
             </ul>
         </nav>
-    </header>
-
-    <!-- Duyuru Banner -->
-    <div class="announcement-banner">
+    </header>    <!-- Duyuru Banner -->
+    <div class="announcement-banner" role="alert" aria-live="polite">
         <div class="banner-container">
-            <div class="banner-icon">📚</div>
+            <div class="banner-icon" aria-hidden="true">📚</div>
             <p class="banner-text">Sait Maden'in <strong>kitapları</strong> yakında <strong>Everest Yayınları</strong>'nda! Gelişmeler için websiteyi takip edin.</p>
             <div class="banner-actions">
                 <a href="https://www.everestyayinlari.com/" class="banner-button pulse-effect" target="_blank" rel="noopener noreferrer">Everest Yayınları'nı Ziyaret Et</a>
-                <button class="banner-close" aria-label="Duyuruyu Kapat">×</button>
+                <button class="banner-close" aria-label="Duyuruyu Kapat">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Duyuruyu Kapat</span>
+                </button>
             </div>
         </div>
-    </div>
-
-    <!-- MAIN: Ana içerik bölümü -->
+    </div><!-- MAIN: Ana içerik bölümü -->
+    <main>
         <!-- ANA SAYFA: Karşılama bölümü -->
         <section class="hero">
             <div class="hero-image">
@@ -149,31 +148,30 @@
             <div class="section-grid">                <article class="section-card documentary-card">
                     <h3>Şık Derviş Belgeseli</h3>
                     <p>Sait Maden - Şık Derviş / The Elegant Dervish (Belgesel). Yönetmen: Miraç Güldoğan</p>
-                    <a href="belgesel.html" class="section-link">İzle <span>&rarr;</span></a>
+                    <a href="belgesel.html" class="section-link" aria-label="Şık Derviş belgeselini izle">İzle <span>&rarr;</span></a>
                 </article>
                 
                 <article class="section-card">
                     <h3>Biyografi</h3>
                     <p>Sait Maden'in 3 Mayıs 1931'de Çorum'da başlayan ve 19 Haziran 2013'te İstanbul'da sona eren yaşam öyküsü.</p>
-                    <a href="biyografi.html" class="section-link">Daha Fazla <span>&rarr;</span></a>
+                    <a href="biyografi.html" class="section-link" aria-label="Sait Maden'in biyografisini oku">Biyografiyi Oku <span>&rarr;</span></a>
                 </article>
                 
                 <article class="section-card">
                     <h3>Grafik Tasarım ve Tipografi</h3>
                     <p>Modern Türk grafik tasarımının öncülerinden olan Sait Maden'in tasarım ve tipografi çalışmaları.</p>
-                    <a href="tasarim.html" class="section-link">Daha Fazla <span>&rarr;</span></a>
+                    <a href="tasarim.html" class="section-link" aria-label="Sait Maden'in tasarım çalışmalarını keşfet">Tasarımları Keşfet <span>&rarr;</span></a>
                 </article>
-                
-                <article class="section-card">
+                  <article class="section-card">
                     <h3>Şiirleri</h3>
                     <p>Sait Maden'in modern Türk şiirine kattığı eserler ve şiir dünyasına bir bakış.</p>
-                    <a href="siirler.html" class="section-link">Daha Fazla <span>&rarr;</span></a>
+                    <a href="siirler.html" class="section-link" aria-label="Sait Maden'in şiirlerini oku">Şiirleri Oku <span>&rarr;</span></a>
                 </article>
                 
                 <article class="section-card">
                     <h3>Çevirileri</h3>
                     <p>Dünya edebiyatının önemli eserlerini Türkçeye kazandırmasıyla tanınan Maden'in çeviri çalışmaları.</p>
-                    <a href="ceviriler.html" class="section-link">Daha Fazla <span>&rarr;</span></a>
+                    <a href="ceviriler.html" class="section-link" aria-label="Sait Maden'in çevirilerini incele">Çevirileri İncele <span>&rarr;</span></a>
                 </article>
             </div>
         </section>

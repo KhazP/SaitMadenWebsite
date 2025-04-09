@@ -1525,3 +1525,28 @@ figcaption {
         padding: 10px;
     }
 }
+
+/* Improve keyboard navigation with visible focus styles */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* For the announcement banner close button */
+.banner-close:focus {
+    outline: 2px solid #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Add a screen reader only class for hidden content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
