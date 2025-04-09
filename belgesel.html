@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sait Maden - Şık Derviş Belgeseli</title>
+    <meta name="description" content="Sait Maden - Şık Derviş / The Elegant Dervish belgesel filmi. Yönetmen: Miraç Güldoğan">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/Said_and_Maden_logo.ico">
+    
+    <style>
+        /* Video page styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #fff;
+        }
+        
+        iframe {
+            width: 90vw;
+            height: 50.625vw; /* 16:9 aspect ratio */
+            max-width: 1280px;
+            max-height: 720px;
+            border: none;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+        
+        .video-title {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .video-title h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-title p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin: 0;
+        }
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .back-button span {
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .video-title h1 {
+                font-size: 1.2rem;
+            }
+            
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button"><span>&larr;</span> Ana Sayfaya Dön</a>
+    
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/PCSgrVfpEHk"
+            title="Sait Maden - Şık Derviş / The Elegant Dervish (Belgesel)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+        <div class="video-title">
+            <h1>Sait Maden - Şık Derviş / The Elegant Dervish</h1>
+            <p>Yönetmen: Miraç Güldoğan</p>
+        </div>
+    </div>
+</body>
+</html>

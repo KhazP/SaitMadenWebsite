@@ -289,49 +289,156 @@ main {
 
 /* Bölümler genel bakış */
 .sections-overview {
-    margin-bottom: var(--spacing-xl);
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .sections-overview h2 {
-    margin-bottom: var(--spacing-m);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    position: relative;
 }
 
+.sections-overview h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Improved responsive grid layout */
 .section-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--spacing-m);
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
+/* Enhanced card styling with improved spacing */
 .section-card {
-    padding: var(--spacing-m);
-    border: 1px solid var(--color-light-gray);
-    transition: all 0.3s ease;
-    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;  /* Ensure equal height cards */
+    padding: 1.8rem;
 }
 
 .section-card:hover {
-    border-color: var(--color-black);
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
+.section-card h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.8rem;
+}
+
+.section-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;  /* This pushes the link to the bottom */
+}
+
+/* Standardized button/link placement */
 .section-link {
-    margin-top: auto;
-    font-family: var(--font-heading);
+    display: inline-block;
+    color: #1a73e8;
     font-weight: 600;
-    color: var(--color-red);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;  /* For consistent positioning */
+    padding-right: 10px;
+    align-self: flex-start;  /* Align to the left */
+    margin-top: auto;  /* Push to the bottom */
 }
 
 .section-link span {
-    transition: transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.2s;
+    margin-left: 4px;
+}
+
+.section-link:hover {
+    color: #0d47a1;
 }
 
 .section-link:hover span {
-    transform: translateX(5px);
+    transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .section-card {
+        padding: 1.5rem;
+    }
+    
+    .section-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sections-overview h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-card {
+        max-width: 100%;
+    }
+}
+
+/* -------- BELGESEL KART STILLERI -------- */
+.documentary-card {
+    position: relative;
+    border: 1px solid var(--color-light-gray);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.documentary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.documentary-thumbnail {
+    margin: var(--spacing-s) 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.documentary-thumbnail img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.documentary-card:hover .documentary-thumbnail img {
+    transform: scale(1.05);
 }
 
 /* -------- FOOTER -------- */
