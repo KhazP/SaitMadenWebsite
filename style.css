@@ -479,7 +479,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: var(--color-light-gray);
+    background-color: var (--color-light-gray);
 }
 
 /* Gallery image hover effect */
@@ -525,45 +525,177 @@ footer {
     margin-bottom: var(--spacing-l);
 }
 
-.poetry-books {
-    margin-bottom: var(--spacing-l);
-}
-
-.poetry-books ul {
-    margin-left: var(--spacing-m);
-    list-style-type: disc;
-}
-
-.poetry-books li {
-    margin-bottom: var(--spacing-xs);
-}
-
 .poem {
-    margin-bottom: var(--spacing-xl);
+    margin: var(--spacing-l) 0;
+    padding: var(--spacing-m);
+    background-color: rgba(245, 245, 245, 0.6);
+    border-left: 3px solid var(--color-red);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     position: relative;
+}
+
+.poem:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 .poem::before {
     content: '"';
     position: absolute;
     top: -20px;
-    left: -30px;
+    left: -10px;
     font-size: 6rem;
-    color: var(--color-light-gray);
+    color: rgba(0, 0, 0, 0.05);
     font-family: var(--font-heading);
-    z-index: -1;
+    z-index: 0;
 }
 
 .poem-title {
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-s);
+    color: var(--color-black);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: var(--spacing-xs);
+    position: relative;
+    z-index: 1;
+}
+
+.poem-context {
+    font-style: italic;
+    color: var(--color-gray);
+    margin-bottom: var(--spacing-s);
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+.poem-text {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-left: var(--spacing-s);
+    margin-top: var(--spacing-s);
+    position: relative;
+    z-index: 1;
+    white-space: pre-line;
+}
+
+.poem-text p {
     margin-bottom: var(--spacing-s);
 }
 
-.poem-content {
-    font-style: italic;
-    white-space: pre-line;
-    line-height: 1.8;
+/* Poetry Books Section */
+.poetry-books {
+    margin: var(--spacing-l) 0;
+}
+
+.poetry-books .books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-l);
+    margin-top: var(--spacing-l);
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    height: 320px;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+.book-info {
+    padding: var(--spacing-m);
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-black);
+}
+
+.book-details {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    margin: var(--spacing-xs) 0;
+}
+
+.book-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+    padding: var(--spacing-xs) var(--spacing-s);
+    color: white;
+    background-color: var(--color-red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.book-link svg {
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.book-link:hover {
+    background-color: #a30030;
+}
+
+.book-link:hover svg {
+    transform: translateX(3px);
+}
+
+.additional-poems {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-m);
+    background-color: var(--color-light-gray);
+    border-radius: 4px;
+}
+
+.additional-poems h4 {
+    margin-bottom: var(--spacing-s);
+}
+
+.additional-poems ul {
+    margin-top: var(--spacing-s);
+    list-style-type: none;
+}
+
+.additional-poems ul li {
+    margin-bottom: var(--spacing-xs);
 }
 
 /* -------- ÇEVİRİLER SAYFASI -------- */
@@ -1195,4 +1327,94 @@ figcaption {
     height: auto;
     max-height: 120px;
     object-fit: contain;
+}
+
+/* Banner styles */
+.announcement-banner {
+    background: linear-gradient(135deg, #2c3e50, #4a69bd);
+    color: white;
+    padding: 12px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.banner-icon {
+    font-size: 1.5rem;
+    animation: float 2s ease-in-out infinite;
+}
+
+.banner-text {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.banner-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+.banner-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.banner-close:hover {
+    opacity: 1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+@media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column;
+        padding: 10px;
+    }
 }

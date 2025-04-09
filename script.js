@@ -38,6 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add icons to characteristic items if they exist
     addCharacteristicIcons();
+
+    // Banner close functionality
+    const bannerCloseBtn = document.querySelector('.banner-close');
+    const announcementBanner = document.querySelector('.announcement-banner');
+    
+    if (bannerCloseBtn && announcementBanner) {
+        bannerCloseBtn.addEventListener('click', function() {
+            announcementBanner.style.display = 'none';
+            // Optionally store in localStorage to keep it closed during the session
+            localStorage.setItem('bannerClosed', 'true');
+        });
+        
+        // Check if banner was previously closed
+        if (localStorage.getItem('bannerClosed') === 'false') {
+            announcementBanner.style.display = 'none';
+        }
+    }
 });
 
 // Logo Gallery Functionality
