@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Göçebe Harf - Placeholder</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        .book-cover {
+            width: 300px;
+            height: 450px;
+            background: #2b2b2b;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+        }
+        .author {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #C70039;
+            position: relative;
+            z-index: 2;
+        }
+        .year {
+            font-size: 16px;
+            margin-top: 20px;
+            opacity: 0.7;
+            position: relative;
+            z-index: 2;
+        }
+        .design-element {
+            width: 80px;
+            height: 3px;
+            background-color: #C70039;
+            margin: 20px 0;
+            position: relative;
+            z-index: 2;
+        }
+        .floating-letters {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.1;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            z-index: 1;
+        }
+        .letter {
+            font-size: 32px;
+            color: #C70039;
+            margin: 10px;
+            transform: rotate(var(--r, 0deg));
+        }
+    </style>
+</head>
+<body>
+    <div class="book-cover">
+        <div class="floating-letters">
+            <span class="letter" style="--r: 45deg;">A</span>
+            <span class="letter" style="--r: -20deg;">B</span>
+            <span class="letter" style="--r: 15deg;">C</span>
+            <span class="letter" style="--r: 90deg;">Ç</span>
+            <span class="letter" style="--r: -45deg;">D</span>
+            <span class="letter" style="--r: 30deg;">E</span>
+            <span class="letter" style="--r: -60deg;">F</span>
+            <span class="letter" style="--r: 75deg;">G</span>
+            <span class="letter" style="--r: 10deg;">H</span>
+            <span class="letter" style="--r: -80deg;">I</span>
+            <span class="letter" style="--r: 60deg;">İ</span>
+            <span class="letter" style="--r: -15deg;">K</span>
+        </div>
+        <div class="title">GÖÇEBE HARF</div>
+        <div class="author">SAİT MADEN</div>
+        <div class="design-element"></div>
+        <div class="year">1997</div>
+    </div>
+</body>
+</html>
